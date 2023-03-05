@@ -1,0 +1,159 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.scrollbottom {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #0000005c;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  cursor: pointer;
+
+}
+
+.scrollbottom p {
+
+    font-weight: 700;
+    color: white;
+    font-size: .7rem;
+}
+
+.todo {
+  background: #111;
+  height: calc(250px - 2rem);
+  width: 20vw;
+  border-radius: 20px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.todolist {
+    
+  width: calc(100vw - 2rem);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 0.7rem;
+}
+
+.todolist div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+* {
+  color: #f8f8f8;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+form {
+  color: #222;
+}
+
+input {
+  color: #111;
+  padding: 0.7rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background: #d4d4d45d;
+  backdrop-filter: blur(20px);
+}
+
+input::placeholder {
+  color: #111;
+}
+
+input:focus {
+  border: 1px black solid;
+  outline: none;
+}
+
+input:active {
+  border: 1px black solid;
+}
+
+button {
+  margin: 1rem;
+  padding: 0.7rem 1rem;
+  color: #111;
+  border-radius: 100px;
+  border: none;
+  min-width: 100px;
+  min-height: 20px;
+  font-size: .8rem;
+  font-weight: 700;
+
+}
+.name {
+  margin: 7px;
+}
+
+button:hover {
+  background: #444;
+  color: #eeeeee;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+main h1 {
+  color: #222;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.titles {
+  background: #ffffff17;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .todo {
+    height: 200px;
+    width: 80%;
+    border-radius: 10px;
+  }
+
+  .todolist {
+    padding: 0.5rem;
+    background: none;
+    flex-direction: column-reverse;
+  }
+
+  input {
+    padding: 0.5rem;
+  }
+
+  button {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    min-width: 70px;
+    min-height: 20px;
+    font-size: small;
+  }
+}
